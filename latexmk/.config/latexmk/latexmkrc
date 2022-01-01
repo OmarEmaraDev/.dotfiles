@@ -1,0 +1,5 @@
+# Use LuaLaTex.
+$pdf_mode = 4;
+
+# Use Zathura for previewing PDFs.
+$pdf_previewer = 'zathura';
