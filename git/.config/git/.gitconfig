@@ -1,0 +1,15 @@
+[user]
+  name = Omar Emara
+  email = mail@OmarEmara.dev
+[core]
+  editor = nvim
+  excludesfile = /home/omar/.config/git/gitignore
+[sendemail]
+  smtpserver = mail.gandi.net
+  smtpuser = mail@omaremara.dev
+  smtpencryption = tls
+  smtpserverport = 587
+  confirm = auto
+  annotate = yes
+[init]
+  defaultBranch = master
