@@ -1,0 +1,6 @@
+[Default Applications]
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
+image/gif=mpv.desktop;
+image/jpeg=mpv.desktop;
+image/png=mpv.desktop;
+image/webp=mpv.desktop;
