@@ -1,3 +1,5 @@
+source ~/.bashrc
+
 # Environmental Variables.
 export CC=clang
 export CXX=clang++
