@@ -1,7 +1,7 @@
 # Bash Variables.
 PS1='┌─[\u]──[\w]\n└─╼ '
-HISTSIZE=
-HISTFILESIZE=
+HISTSIZE=-1
+HISTFILESIZE=-1
 
 # Aliases.
 alias blender='~/projects/blender/build/bin/blender'
