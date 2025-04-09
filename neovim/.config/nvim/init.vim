@@ -48,7 +48,7 @@ autocmd BufWritePre *.c,*.h,*.cc,*.cpp,*.hpp,*.hh,*.mm,*.glsl,*.osl call ClangFo
 augroup END
 
 " Force GLSL files to have C syntax highlighting.
-autocmd BufNewFile,BufRead *.glsl set syntax=c
+autocmd BufNewFile,BufRead *.glsl set filetype=c
 
 " Remove banner from netrw.
 let g:netrw_banner = 0
