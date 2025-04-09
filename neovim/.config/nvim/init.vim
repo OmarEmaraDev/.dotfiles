@@ -32,6 +32,8 @@ set undodir=~/.cache/nvim/undodir
 set list
 " Use ripgrep as the default grep program.
 set grepprg=rg\ -S\ --vimgrep
+" Enabling spelling.
+set spell
 
 " Define a function that formats the current buffer using
 " clang-format as a filter while retaining the window view.
