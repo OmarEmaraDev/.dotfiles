@@ -44,11 +44,8 @@ endfunction
 
 " Format current buffer using clang-format upon saving.
 augroup clangformat
-autocmd BufWritePre *.c,*.h,*.cc,*.cpp,*.hpp,*.hh,*.glsl,*.ispc,*.cs,*.js,*.java call ClangFormat()
+autocmd BufWritePre *.c,*.h,*.cc,*.cpp,*.hpp,*.hh,*.mm,*.glsl,*.osl call ClangFormat()
 augroup END
-
-" Force dart files to have javascript syntax highlighting.
-autocmd BufNewFile,BufRead *.dart set syntax=javascript
 
 " Force GLSL files to have C syntax highlighting.
 autocmd BufNewFile,BufRead *.glsl set syntax=c
@@ -61,4 +58,3 @@ let g:netrw_home = "~/.cache/nvim"
 
 " Set default *.tex flavor to LaTeX.
 let g:tex_flavor = "latex"
-
