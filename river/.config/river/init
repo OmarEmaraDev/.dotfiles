@@ -23,6 +23,10 @@ riverctl map normal Super+Shift E exit
 riverctl map normal Super J focus-view next
 riverctl map normal Super K focus-view previous
 
+# Super+Tab and Super+Shift+Tab to focus the previous/next view in the layout stack
+riverctl map normal Super Tab focus-view previous
+riverctl map normal Super+Shift Tab focus-view next
+
 # Super+Shift+J and Super+Shift+K to swap the focused view with the next/previous
 # view in the layout stack
 riverctl map normal Super+Shift J swap next
