@@ -186,3 +186,6 @@ wideriver \
     --border-color-unfocused       "0x586e75" \
     --log-threshold                info       \
    > "/tmp/wideriver.${XDG_VTNR}.${USER}.log" 2>&1 &
+
+# Import the WAYLAND_DISPLAY environment variable from river into the systemd user session.
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
