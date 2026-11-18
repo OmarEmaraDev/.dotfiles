@@ -43,6 +43,30 @@ vim.g.netrw_home = vim.fn.expand("~/.cache/nvim")
 -- Set default *.tex flavor to LaTeX.
 vim.g.tex_flavor = "latex"
 
+-- Setup clangd LSP server.
+vim.lsp.config.clangd = {
+  cmd = { 'clangd' , '--rename-file-limit=0' },
+  root_markers = { 'compile_commands.json' },
+  filetypes = { 'c', 'cpp', 'objcpp' },
+}
+vim.lsp.enable({'clangd'})
+
+-- Do not show diagnostic signs next to line numbers.
+vim.diagnostic.config({signs = false})
+
+vim.api.nvim_set_hl(0, '@lsp.mod.deprecated', {})
+vim.api.nvim_set_hl(0, '@lsp.type.comment.cpp', {})
+
+-- Format on save using clang-format through the clangd LSP server.
+vim.api.nvim_create_autocmd("BufWritePre", {
+  group = clang_format_group,
+  callback = function()
+    vim.lsp.buf.format({ async = false })
+  end,
+})
+
+-- Format on save using clang-format for GLSL and OSL files.
+-- Those are not covered by clangd LSP above.
 vim.cmd([[
 " Define a function that formats the current buffer using
 " clang-format as a filter while retaining the window view.
@@ -53,6 +77,6 @@ endfunction
 
 " Format current buffer using clang-format upon saving.
 augroup clangformat
-autocmd BufWritePre *.c,*.h,*.cc,*.cpp,*.hpp,*.hh,*.mm,*.glsl,*.osl call ClangFormat()
+autocmd BufWritePre *.glsl,*.osl call ClangFormat()
 augroup END
 ]])
