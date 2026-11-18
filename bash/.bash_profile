@@ -9,3 +9,4 @@ export EDITOR=nvim
 export PAGER=less
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 export LSAN_OPTIONS="print_suppressions=false:suppressions=/home/omar/.config/lsan/suppressions"
+export ASAN_OPTIONS"=alloc_dealloc_mismatch=0"
