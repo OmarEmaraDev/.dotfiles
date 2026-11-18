@@ -1,0 +1,12 @@
+antigravity-cli
+davinci-resolve
+heroic-games-launcher-bin
+heroic-games-launcher-bin-debug
+hotspot-appimage
+nnd-bin
+pandoc-bin
+ttf-iosevka
+ventoy-bin
+ventoy-bin-debug
+wideriver
+wideriver-debug
