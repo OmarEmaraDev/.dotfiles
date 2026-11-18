@@ -148,7 +148,7 @@ riverctl map normal Super A spawn 'chromium'
 riverctl map normal Super+Shift A spawn 'chromium --incognito'
 riverctl map normal Super O spawn 'foot nnn'
 riverctl map normal Super S spawn 'grim -g "$(slurp)" ~/Pictures/screenshots/$(date +%Y%m%d-%H%M%S).png'
-riverctl map normal Super+Shift S spawn 'pkill -SIGINT "wf-recorder" || wf-recorder -g "$(slurp)" -f ~/Videos/screencasts/$(date +%Y%m%d-%H%M%S).mp4'
+riverctl map normal Super+Shift S spawn 'pkill -SIGINT "wf-recorder" || wf-recorder -c h264_vaapi -d /dev/dri/renderD128 -p color_range=limited -F scale_vaapi=format=nv12:out_range=limited -g "$(slurp)" -f ~/Videos/screencasts/$(date +%Y%m%d-%H%M%S).mp4'
 
 # Set background and border color
 riverctl background-color 0x002b36
